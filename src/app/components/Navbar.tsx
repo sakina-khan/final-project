@@ -6,7 +6,7 @@ const Navbar = () => {
       <div className="container mx-auto px-4 lg:px-8 flex items-center justify-between py-4">
         {/* Left Side: Logo */}
         <div className="flex items-center">
-          <img src="Logo Icon.png" alt="Logo" className="h-10" />
+          <img src="Logo Icon (1).png" alt="Logo" className="h-10" />
           <span className="ml-2 text-xl font-bold text-gray-800">Comforty</span>
         </div>
 

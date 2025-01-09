@@ -1,85 +1,75 @@
 import React from 'react';
-import Link from 'next/link';  // Import Link from next
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-100 py-8">
-      <div className="container mx-auto px-4">
-        {/* Top Footer: Logo and Description */}
-        <div className="flex flex-col lg:flex-row justify-between items-center lg:items-start mb-8">
+    <footer style={{ backgroundColor: '#f9f9f9', padding: '40px 0', borderTop: '1px solid #ddd' }}>
+      <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 20px' }}>
+        <div style={{ display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap' }}>
           {/* Logo and Description */}
-          <div className="text-center lg:text-left mb-6 lg:mb-0">
-            <h1 className="text-2xl font-bold text-teal-500">Comforty</h1>
-            <p className="text-gray-600 mt-2 max-w-md">
-              Unique furniture for all needs. Visit and explore our modern product collection.
+          <div style={{ flex: '1 1 200px', marginBottom: '20px' }}>
+            <h3 style={{ fontSize: '1.5em', marginBottom: '15px', fontWeight: 'bold' }}>Comforty</h3>
+            <p style={{ fontSize: '1em', color: '#555', lineHeight: '1.6' }}>
+              Vivamus tristique odio sit amet velit semper, eu posuere turpis interdum. Cras egestas purus.
             </p>
+            <div style={{ marginTop: '20px', display: 'flex', gap: '15px' }}>
+              <a href="#" style={{ color: '#555', fontSize: '1.2em' }}><i className="fab fa-facebook"></i></a>
+              <a href="#" style={{ color: '#555', fontSize: '1.2em' }}><i className="fab fa-twitter"></i></a>
+              <a href="#" style={{ color: '#555', fontSize: '1.2em' }}><i className="fab fa-instagram"></i></a>
+              <a href="#" style={{ color: '#555', fontSize: '1.2em' }}><i className="fab fa-youtube"></i></a>
+            </div>
           </div>
 
-          {/* Footer Links */}
-          <div className="flex flex-col lg:flex-row gap-8">
-            {/* Categories */}
-            <div>
-              <h3 className="text-lg font-semibold text-gray-800 mb-4">Category</h3>
-              <ul className="space-y-2 text-gray-600">
-                <li>
-                  <Link href="/bar-stools">Bar Stools</Link>
-                </li>
-                <li>
-                  <Link href="/office-chairs">Office Chairs</Link>
-                </li>
-                <li>
-                  <Link href="/dining-chairs">Dining Chairs</Link>
-                </li>
-                <li>
-                  <Link href="/gaming-chairs">Gaming Chairs</Link>
-                </li>
-              </ul>
-            </div>
+          {/* Categories */}
+          <div style={{ flex: '1 1 200px', marginBottom: '20px' }}>
+            <h4 style={{ fontSize: '1.2em', marginBottom: '15px', fontWeight: 'bold' }}>Category</h4>
+            <ul style={{ listStyle: 'none', padding: 0, fontSize: '1em', color: '#555', lineHeight: '2' }}>
+              <li><a href="#" style={{ color: '#555', textDecoration: 'none' }}>Sofa</a></li>
+              <li><a href="#" style={{ color: '#555', textDecoration: 'none' }}>Armchair</a></li>
+              <li><a href="#" style={{ color: '#555', textDecoration: 'none' }}>Wing Chair</a></li>
+              <li><a href="#" style={{ color: '#555', textDecoration: 'none' }}>Desk Chair</a></li>
+              <li><a href="#" style={{ color: '#555', textDecoration: 'none' }}>Wooden Chair</a></li>
+              <li><a href="#" style={{ color: '#555', textDecoration: 'none' }}>Park Bench</a></li>
+            </ul>
+          </div>
 
-            {/* Customer Service */}
-            <div>
-              <h3 className="text-lg font-semibold text-gray-800 mb-4">Customer</h3>
-              <ul className="space-y-2 text-gray-600">
-                <li>
-                  <Link href="/help-support">Help & Support</Link>
-                </li>
-                <li>
-                  <Link href="/returns-exchanges">Returns & Exchanges</Link>
-                </li>
-                <li>
-                  <Link href="/privacy-policy">Privacy Policy</Link>
-                </li>
-                <li>
-                  <Link href="/terms-conditions">Terms & Conditions</Link>
-                </li>
-              </ul>
-            </div>
+          {/* Support */}
+          <div style={{ flex: '1 1 200px', marginBottom: '20px' }}>
+            <h4 style={{ fontSize: '1.2em', marginBottom: '15px', fontWeight: 'bold' }}>Support</h4>
+            <ul style={{ listStyle: 'none', padding: 0, fontSize: '1em', color: '#555', lineHeight: '2' }}>
+              <li><a href="#" style={{ color: '#555', textDecoration: 'none' }}>Help & Support</a></li>
+              <li><a href="#" style={{ color: '#555', textDecoration: 'none' }}>Terms & Conditions</a></li>
+              <li><a href="#" style={{ color: '#555', textDecoration: 'none' }}>Privacy Policy</a></li>
+              <li><a href="#" style={{ color: '#555', textDecoration: 'none' }}>Help</a></li>
+            </ul>
           </div>
 
           {/* Newsletter */}
-          <div>
-            <h3 className="text-lg font-semibold text-gray-800 mb-4">Newsletter</h3>
-            <form className="flex">
-              <input
-                type="email"
-                placeholder="Email Address"
-                className="flex-1 px-4 py-2 border border-gray-300 rounded-l-lg focus:outline-none"
+          <div style={{ flex: '1 1 200px', marginBottom: '20px' }}>
+            <h4 style={{ fontSize: '1.2em', marginBottom: '15px', fontWeight: 'bold' }}>Newsletter</h4>
+            <p style={{ fontSize: '1em', color: '#555', lineHeight: '1.6' }}>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tincidunt arcu et.
+            </p>
+            <form>
+              <input 
+                type="email" 
+                placeholder="Your email" 
+                style={{ width: '100%', padding: '12px', margin: '15px 0', border: '1px solid #ddd', borderRadius: '4px' }} 
               />
-              <button className="bg-teal-500 text-white px-6 py-2 rounded-r-lg hover:bg-teal-600">
+              <button 
+                type="submit" 
+                style={{ backgroundColor: '#007BFF', color: '#fff', padding: '12px 20px', border: 'none', borderRadius: '4px', cursor: 'pointer' }}
+              >
                 Subscribe
               </button>
             </form>
           </div>
         </div>
 
-        {/* Bottom Footer: Copyright and Payment Options */}
-        <div className="flex flex-col lg:flex-row justify-between items-center text-gray-500 text-sm">
-          <p>&copy; 2024 Comforty - All rights reserved</p>
-          <div className="flex gap-4 mt-4 lg:mt-0">
-            <img src="/payments/paypal.png" alt="PayPal" className="h-6" />
-            <img src="/payments/visa.png" alt="Visa" className="h-6" />
-            <img src="/payments/mastercard.png" alt="MasterCard" className="h-6" />
-            <img src="/payments/stripe.png" alt="Stripe" className="h-6" />
+        <div style={{ textAlign: 'center', marginTop: '40px', fontSize: '0.9em', color: '#888' }}>
+          <p>&copy; 2021 - Blogzy - Designed & Developed by Zairosoft</p>
+          <div style={{ marginTop: '10px' }}>
+            <img src="/path-to-paypal-logo.png" alt="PayPal" style={{ marginRight: '15px', verticalAlign: 'middle' }} />
+            <img src="/path-to-visa-logo.png" alt="Visa" style={{ verticalAlign: 'middle' }} />
           </div>
         </div>
       </div>
